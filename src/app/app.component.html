@@ -1,0 +1,10 @@
+<h1>{{title}}</h1>
+<h3>We have {{cardSlots()}} slots </h3>
+<p>{{lastClient()}}</p>
+<input type="text" #holder [disabled]="soldOut()"/>
+<button (click)="add(holder)"
+        [disabled]="soldOut()">Save</button>
+
+<div *ngFor="let card of cards()">
+  {{card.holder}} {{card.id}}
+</div>
